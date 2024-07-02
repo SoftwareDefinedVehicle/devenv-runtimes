@@ -76,7 +76,7 @@ def handler(_signum, _frame):  # noqa: U101 unused arguments
 def main(service_id: str) -> bool:
     service: Optional[Service] = None
     try:
-        service = get_specific_service(service_id)
+        service = get_specific_service(service_id, get_runnable=True)
     except RuntimeError as e:
         print(f"Error: {e.__str__()}")
         print("Available services:")

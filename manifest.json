@@ -6,15 +6,9 @@
             "type": "runtime",
             "programs": [
                 {
-                    "id": "run-vehicledatabroker-cli",
-                    "executable": "./runtime_local/src/run-vehicledatabroker-cli.sh"
-                },
-                {
-                    "id": "run-service",
-                    "executable": "python3",
-                    "args": [
-                        "./runtime_local/src/run_service.py"
-                    ]
+                  "id": "run-service",
+                  "executable": "python3",
+                  "args": ["./runtime_local/src/run_service.py"]
                 },
                 {
                     "id": "up",
@@ -55,48 +49,54 @@
                 }
             ],
             "variables": [
-                {
-                    "name": "runtimeFilePath",
-                    "type": "string",
-                    "description": "Path to the file describing your custom runtime configuration.",
-                    "default": "runtime.json"
-                },
-                {
-                    "name": "mockFilePath",
-                    "type": "string",
-                    "description": "Path to the mocking configuration for the mock service",
-                    "default": "mock.py"
-                },
-                {
-                    "name": "mqttBrokerImage",
-                    "type": "string",
-                    "description": "Docker image for mqtt broker",
-                    "default": "eclipse-mosquitto:2.0.14"
-                },
-                {
-                    "name": "vehicleDatabrokerImage",
-                    "type": "string",
-                    "description": "Docker image for vehicle databroker",
-                    "default": "ghcr.io/eclipse-kuksa/kuksa-databroker:0.4.4"
-                },
-                {
-                    "name": "seatServiceImage",
-                    "type": "string",
-                    "description": "Docker image for seat service",
-                    "default": "ghcr.io/eclipse-kuksa/kuksa-incubation/seat_service:0.4.0"
-                },
-                {
-                    "name": "feederCanImage",
-                    "type": "string",
-                    "description": "Docker image for feeder can",
-                    "default": "ghcr.io/eclipse-kuksa/kuksa-can-provider/can-provider:0.4.2"
-                },
-                {
-                    "name": "mockServiceImage",
-                    "type": "string",
-                    "description": "Docker image for mock service",
-                    "default": "ghcr.io/eclipse-kuksa/kuksa-mock-provider/mock-provider:0.4.0"
-                }
+              {
+                "name": "runtimeFilePath",
+                "type": "string",
+                "description": "Path to the file describing your custom runtime configuration.",
+                "default": "runtime.json"
+              },
+              {
+                "name": "mockFilePath",
+                "type": "string",
+                "description": "Path to the mocking configuration for the mock service",
+                "default": "mock.py"
+              },
+              {
+                "name": "mqttBrokerImage",
+                "type": "string",
+                "description": "Docker image for mqtt broker",
+                "default": "eclipse-mosquitto:2.0.14"
+              },
+              {
+                "name": "vehicleDatabrokerImage",
+                "type": "string",
+                "description": "Docker image for vehicle databroker",
+                "default": "ghcr.io/eclipse-kuksa/kuksa-databroker:0.4.4"
+              },
+              {
+                "name": "seatServiceImage",
+                "type": "string",
+                "description": "Docker image for seat service",
+                "default": "ghcr.io/eclipse-kuksa/kuksa-incubation/seat_service:0.4.0"
+              },
+              {
+                "name": "feederCanImage",
+                "type": "string",
+                "description": "Docker image for feeder can",
+                "default": "ghcr.io/eclipse-kuksa/kuksa-can-provider/can-provider:0.4.2"
+              },
+              {
+                "name": "mockServiceImage",
+                "type": "string",
+                "description": "Docker image for mock service",
+                "default": "ghcr.io/eclipse-kuksa/kuksa-mock-provider/mock-provider:0.4.0"
+              },
+              {
+                "name": "databrokerCliImage",
+                "type": "string",
+                "description": "Docker image for databroker cli",
+                "default": "ghcr.io/eclipse-kuksa/kuksa-databroker-cli:0.4.5"
+              }
             ]
         },
         {
@@ -136,48 +136,54 @@
                 }
             ],
             "variables": [
-                {
-                    "name": "runtimeFilePath",
-                    "type": "string",
-                    "description": "Path to the file describing your custom runtime configuration.",
-                    "default": "runtime.json"
-                },
-                {
-                    "name": "mockFilePath",
-                    "type": "string",
-                    "description": "Path to the mocking configuration for the mock service",
-                    "default": "mock.py"
-                },
-                {
-                    "name": "mqttBrokerImage",
-                    "type": "string",
-                    "description": "Docker image for mqtt broker",
-                    "default": "registry.hub.docker.com/library/eclipse-mosquitto:2.0.14"
-                },
-                {
-                    "name": "vehicleDatabrokerImage",
-                    "type": "string",
-                    "description": "Docker image for vehicle databroker",
-                    "default": "ghcr.io/eclipse-kuksa/kuksa-databroker:0.4.4"
-                },
-                {
-                    "name": "seatServiceImage",
-                    "type": "string",
-                    "description": "Docker image for seat service",
-                    "default": "ghcr.io/eclipse-kuksa/kuksa-incubation/seat_service:0.4.0"
-                },
-                {
-                    "name": "feederCanImage",
-                    "type": "string",
-                    "description": "Docker image for feeder can",
-                    "default": "ghcr.io/eclipse-kuksa/kuksa-can-provider/can-provider:0.4.2"
-                },
-                {
-                    "name": "mockServiceImage",
-                    "type": "string",
-                    "description": "Docker image for mock service",
-                    "default": "ghcr.io/eclipse-kuksa/kuksa-mock-provider/mock-provider:0.4.0"
-                }
+              {
+                "name": "runtimeFilePath",
+                "type": "string",
+                "description": "Path to the file describing your custom runtime configuration.",
+                "default": "runtime.json"
+              },
+              {
+                "name": "mockFilePath",
+                "type": "string",
+                "description": "Path to the mocking configuration for the mock service",
+                "default": "mock.py"
+              },
+              {
+                "name": "mqttBrokerImage",
+                "type": "string",
+                "description": "Docker image for mqtt broker",
+                "default": "registry.hub.docker.com/library/eclipse-mosquitto:2.0.14"
+              },
+              {
+                "name": "vehicleDatabrokerImage",
+                "type": "string",
+                "description": "Docker image for vehicle databroker",
+                "default": "ghcr.io/eclipse-kuksa/kuksa-databroker:0.4.4"
+              },
+              {
+                "name": "seatServiceImage",
+                "type": "string",
+                "description": "Docker image for seat service",
+                "default": "ghcr.io/eclipse-kuksa/kuksa-incubation/seat_service:0.4.0"
+              },
+              {
+                "name": "feederCanImage",
+                "type": "string",
+                "description": "Docker image for feeder can",
+                "default": "ghcr.io/eclipse-kuksa/kuksa-can-provider/can-provider:0.4.2"
+              },
+              {
+                "name": "mockServiceImage",
+                "type": "string",
+                "description": "Docker image for mock service",
+                "default": "ghcr.io/eclipse-kuksa/kuksa-mock-provider/mock-provider:0.4.0"
+              },
+              {
+                "name": "databrokerCliImage",
+                "type": "string",
+                "description": "Docker image for databroker cli",
+                "default": "ghcr.io/eclipse-kuksa/kuksa-databroker-cli:0.4.5"
+              }
             ]
         },
         {
